@@ -7,12 +7,10 @@ struct node{
 struct node* head=NULL;
 void reverseAdj(){
     struct node* p=head;
-
     while(p!=NULL && p->next!=NULL){
         int temp=p->data;
         p->data=p->next->data;
         p->next->data=temp;
-
         p=p->next->next;
     }
 }
